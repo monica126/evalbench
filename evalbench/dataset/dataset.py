@@ -39,7 +39,7 @@ def load_dataset_from_json(json_file_path, config):
 def load_dataset_from_bird_format(dataset: Sequence[dict],config):
     input_items: dict[str, list[EvalInputRequest]] = {"dql": [], "dml": [], "ddl": []}
     dataset_config = config['dataset_config']
-    dataset_str = str(dataset_config).split('/')[-1].replace(".json","")
+    dataset_str = str(dataset_config).split('/')[-1].replace(".json", "")
     dialects = config["dialects"]
     query_type = "dql"
     for item in dataset:
